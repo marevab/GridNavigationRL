@@ -49,6 +49,8 @@ The corresponding maximum reward is 7089 (written at the top-right corner of the
 
 ### Project content ###
 
+Programming language: Matlab
+
 Content of this project: 
 
 * 'RL_main.m': main script of the program
