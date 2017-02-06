@@ -1,6 +1,6 @@
 # Q-learning for Grid Navigation
 
-### Synopsis ###
+## Synopsis ##
 This project took place during the module _Neural networks_ at NUS (EE5904R).
 It consists of making a robot traverse a 10 x 10 grid starting from the top-left cell of the grid and ending at the bottom-right cell. The grid is made of 100 cells and each cell corresponds to a state: the start cell corresponds to the state 1 (green star) and the goal cell to state 100 (red star).
 
@@ -31,7 +31,7 @@ The main steps of the Q-learning algorithm are:
 
 The step 2 is repeated until convergence of the _Q-function_.
 
-### Results ###
+## Results ##
 
 One of the challenges of implementing the Q-learning algorithm is the convergence criterion of the _Q-function_. As a convergence criterion, I choose to compute the "mean-squared difference" between two consecutive Q-function values. Nevertheless the evolution of this variable is very noisy : very high values goes to very low values, then goes to high values. Thus nothing can be concluded about the convergence of the Q-function by analysing only the value of the mean-squared difference of the last trial. To get rid of this noise, we use a weighted sum of the values of the mean-squared difference over the trials. This process is called exponentially weighted moving average (EWMA) and enables to get rid of the "higher frequencies" of the signal and make it smoother. The  evolution of the EWMA of the mean-squared difference of the _Q-function_ is as following:
 
@@ -47,7 +47,7 @@ After convergence of the _Q-function_, the optimal policy is determined and it g
 
 The corresponding maximum reward is 7089 (written at the top-right corner of the grid).
 
-### Project content ###
+## Project on GitHub ##
 
 Programming language: Matlab
 
@@ -59,6 +59,6 @@ Content of this project:
 
 To make the program run: run _RL_main_ to apply the Q-learning algorithm (it assumes that a 100 x 4 array _reward_ is already in Matlab workspace). 
 
-### Author ###
+## Author ##
 
 Mareva Brixy (marevabrixy@gmail.com)
